@@ -1,4 +1,4 @@
-# FSA_TO_DO
+<!-- # FSA_TO_DO
 -----------------------------------------
 
 Fullstack Academy’s First Challenges!
@@ -50,4 +50,4 @@ Evaluation Criteria:
 ● Responsive: 5 points
 ● Categorize tasks: *Extra 2 points
 ● Due dates for tasks: *Extra 2 points
-● Mark task complete/incomplete: *Extra 2 points
+● Mark task complete/incomplete: *Extra 2 points -->
