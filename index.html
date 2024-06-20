@@ -1,70 +1,73 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- STYLESHEETS -->
-		<link rel="stylesheet" href="styles.css" />
 
-		<!-- SCRIPTS -->
-		<script src="script.js" defer></script>
-		<!-- !HTML -->
-		<!-- TODO: Clean up / Re-write / Modify if need -->
-		<!-- TODO: Include dev names inside footer -->
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- STYLESHEETS -->
+	<link rel="stylesheet" href="styles.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	
+	
+	<link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap" rel="stylesheet">
+	<!-- SCRIPTS -->
+	<script src="script.js" defer></script>
+	<!-- <script src="keys.js" ></script> -->
+	<!-- <script src="keys.mjs" ></script> -->
+	<!-- !HTML -->
+	<!-- TODO: Clean up / Re-write / Modify if need -->
+	<!-- TODO: Include dev names inside footer -->
 
-		<!-- !CSS -->
-		<!-- TODO: Change colors -->
-		<!-- TODO: Fonts -->
-		<!-- TODO: Effects -->
-		<!-- TODO: Text Decorations -->
-		<!-- TODO: Clean up / Re-write / Modify if need -->
+	<!-- !CSS -->
+	<!-- TODO: Change colors -->
+	<!-- TODO: Fonts -->
+	<!-- TODO: Effects -->
+	<!-- TODO: Text Decorations -->
+	<!-- TODO: Clean up / Re-write / Modify if need -->
 
-		<!-- !JS -->
-		<!-- TODO: Add effects?? -->
-		<!-- TODO: PRIORITY -- Replace browser Alert Box w/ application alert -->
-		<!-- !TODO: Animations?? -->
-		<!-- TODO: Clean up / Re-write / Modify if need -->
+	<!-- !JS -->
+	<!-- TODO: Add effects?? -->
+	<!-- TODO: PRIORITY -- Replace browser Alert Box w/ application alert -->
+	<!-- !TODO: Animations?? -->
+	<!-- TODO: Clean up / Re-write / Modify if need -->
 
-		<!-- !BUGS -->
-		<!-- !TODO: NONE CURRENTLY -->
+	<!-- !BUGS -->
+	<!-- !TODO: NONE CURRENTLY -->
 
-		<title>Attributed Agenda</title>
-	</head>
-	<body>
-		<div class="container">
-			<div class="agenda">
-				<h2>Current Agenda</h2>
-				<div class="row">
-					<input
-						type="text"
-						id="input-box"
-						placeholder="Enter a task"
-						required />
-					<button onclick="addTask()">Add</button>
-				</div>
-				<!-- <div class="row">
-					<h3>Due Date?</h3>
-					<input
-						type="radio"
-						id="due-date"
-						name="fav_language"
-						value="HTML" />
-					<label for="due-date">Yes</label><br />
-				</div>
-				<div class="row">
-					<input
-						type="text"
-						id="date-input-box"
-						placeholder="Enter a task" />
-					<button onclick="">Add</button>
-				</div> -->
+	<title>Attributed Agenda</title>
+</head>
 
-				<ul id="li-container">
-					<!-- <li class="checked">Task 1</li>
+<body>
+	<div class="container">
+		<div class="agenda">
+			<h2>Active Agenda</h2>
+			<!-- <div class="required-field"></div> -->
+			<div class="row">
+				<input type="text" id="input-box" placeholder="Enter a task..." required />
+			</div>
+			<div class="row">
+				<input type="date" id="inputDate" min 0001 max="9999" required onkeypress="enterKey(event)" />
+			</div>
+			<button onclick="addTask()">Add to List</button>
+			<ul id="li-container">
+				<!-- !DO NOT DELETE -->
+				<!-- <li class="checked">Task 1</li>
 					<li>Task 2</li>
 					<li>Task 3</li> -->
-				</ul>
-			</div>
+			</ul>
 		</div>
-	</body>
+	</div>
+	<!-- !ALERT MODAL-->
+	<div id="alertModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p>Please fill out both fields before adding a task.</p>
+		</div>
+	</div>
+</body>
+
 </html>

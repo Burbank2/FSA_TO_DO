@@ -7,27 +7,29 @@
 .container {
 	width: 100%;
 	height: 109vh;
-	background: linear-gradient(170deg, #e3bc0f, #c22460);
+	background: linear-gradient(170deg, #000000, #870cc5);
 	padding: 10px;
 }
 .agenda {
 	width: 100%;
 	max-width: 540px;
-	background: #fff;
+	height: auto;
+	background: #bbb4b4;
 	margin: 100px auto 20px;
-	padding: 40px 30px 70px;
+	padding: 40px 30px;
 	border-radius: 10px;
+	border: 5px black solid;
 }
+
 
 .agenda h2 {
 	color: #002765;
 	display: flex;
-	/* align-items: center; */
 	justify-content: center;
 	margin-bottom: 20px;
-	/* text-decoration: underline;
-	text-decoration-color: #ff5545; */
 	text-decoration-thickness: 6px;
+	font-family: "Space Mono", monospace;font-weight: 400;
+	font-style: normal;
 }
 
 .row {
@@ -36,7 +38,7 @@
 	justify-content: space-between;
 	background: #edeef0;
 	border-radius: 30px;
-	padding-left: 20px;
+	/* padding-left: 20px; */
 	margin-bottom: 25px;
 }
 
@@ -46,27 +48,49 @@ input {
 	outline: none;
 	background: transparent;
 	padding: 10px;
-	font-weight: 14px;
+	font-family: "Space Mono", monospace;
+
+  	font-weight: 400;
+  	font-style: normal;
+	border: 3px solid black;
+	border-radius: 40px;
+
+}
+#inputDate{
+	cursor: pointer;
 }
 
 button {
-	border: none;
+	border: 3px solid black;
 	outline: none;
-	padding: 16px 50px;
-	background: #17b7a7;
+	padding: 12px 50px;
+	background: #a32b2b;
 	color: #fff;
 	font-size: 16px;
 	cursor: pointer;
 	border-radius: 40px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;	
+	font-family: "Space Mono", monospace;
+  	font-weight: 200;
+  	font-style: normal;
 }
+
+button:hover{
+	background-color: rgb(138, 27, 172);	
+}
+
 
 ul li {
 	list-style: none;
 	font-size: 20px;
+	margin-top: 40px;
 	padding: 12px 8px 18px 50px;
 	user-select: none;
 	cursor: pointer;
 	position: relative;
+	font-weight: bold;
 }
 
 ul li::before {
@@ -80,11 +104,13 @@ ul li::before {
 	top: 12px;
 	left: 8px;
 	text-align: center;
+
 }
 
 ul li.checked {
 	color: #555;
 	text-decoration: line-through;
+	opacity: .2;
 }
 
 ul li.checked::before {
@@ -107,3 +133,60 @@ ul li span {
 ul li span:hover {
 	background: #edeef0;
 }
+
+input:focus{
+	/* outline-color: red; */
+	border-color: red;
+}
+
+/* Modal */
+
+.modal {
+	display: none; 
+	position: fixed; 
+	z-index: 1; 
+	padding-top: 100px; 
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%; 
+	overflow: auto; 
+	background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+	background-color: #a32b2b;
+	margin: auto;
+	padding: 40px 20px;
+	border: 1px solid #888;
+	width: 40%;
+	/* max-width: 400px; */
+	height: auto;
+	position: relative;
+	text-align: center;
+	font-size: 1.3em;
+
+}
+
+.close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding-left: 10px;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* .required-field::after {
+    content: "*";
+    color: red;
+} */
