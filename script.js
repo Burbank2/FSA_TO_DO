@@ -7,6 +7,11 @@ const inputDate = document.getElementById('inputDate');
 const modal = document.getElementById("alertModal");
 const span = document.getElementsByClassName("close")[0];
 
+// document.getElementById('inputDate').
+// addEventListener('input', function (e) {
+//     e.target.value = e.target.value.replace(/[^\d]/g, '').slice(0, 4);
+// });
+
 addTask = () => {
     if (inputBox.value === "" || inputDate.value === "") {
         modal.style.display = "block";
@@ -21,7 +26,7 @@ addTask = () => {
         }
     } else {
         let li = document.createElement("li");
-        li.innerHTML = `${inputBox.value} - Due: ${inputDate.value}`;
+        li.innerHTML = `${inputBox.value} - Due: ${inputDate.value} @ ${inputTime.value}`;
         listContainer.appendChild(li);
 
         let span = document.createElement("span");
@@ -36,19 +41,18 @@ addTask = () => {
     
 };
 
+//! ----------jQuery---------- 
 
-// enterKey = (event) => {  
-//     if (event.keyCode === 13) {
-// 		// Prevent form submission
-//         event.preventDefault(); 
-//         addTask();
-//     };
-// }
+// DATE PICKER
+$( function() {
+    $( "#inputDate" ).datepicker();
+} );
 
+$( function() {
+    $( "#inputTime" ).timepicker();
+} );
 
-
-
-
+//! ----------LI---------- 
 listContainer.addEventListener(
 	"click",
 	function (e) {
@@ -64,6 +68,7 @@ listContainer.addEventListener(
 	false
 );
 
+
 function saveData() {
 	localStorage.setItem("data", listContainer.innerHTML);
 }
@@ -71,5 +76,5 @@ function saveData() {
 function showTask() {
 	listContainer.innerHTML = localStorage.getItem("data");
 }
-// enterKey();
+
 showTask();

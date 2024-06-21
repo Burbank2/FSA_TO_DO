@@ -10,6 +10,8 @@
 	background: linear-gradient(170deg, #000000, #870cc5);
 	padding: 10px;
 }
+
+/*! ----------AGENDA---------- */
 .agenda {
 	width: 100%;
 	max-width: 540px;
@@ -31,18 +33,31 @@
 	font-family: "Space Mono", monospace;font-weight: 400;
 	font-style: normal;
 }
-
+/*! ----------INPUT---------- */
 .row {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	background: #edeef0;
 	border-radius: 30px;
-	/* padding-left: 20px; */
 	margin-bottom: 25px;
 }
 
-input {
+/* input {
+	flex: 1;
+	border: none;
+	outline: none;
+	background: transparent;
+	padding: 10px;
+	font-family: "Space Mono", monospace;
+
+  	font-weight: 400;
+  	font-style: normal;
+	border: 3px solid black;
+	border-radius: 40px;
+} */
+
+input, .datetime-picker {
 	flex: 1;
 	border: none;
 	outline: none;
@@ -56,10 +71,17 @@ input {
 	border-radius: 40px;
 
 }
+.datetime-picker{
+	border: none;
+}
 #inputDate{
 	cursor: pointer;
+	margin-right: 30px;
 }
 
+
+
+/*! ----------BUTTON---------- */
 button {
 	border: 3px solid black;
 	outline: none;
@@ -82,7 +104,17 @@ button:hover{
 }
 
 
-ul li {
+/*! ----------LI---------- */
+ul li{
+	list-style: none;
+	font-size: 17px;
+	padding: 12px 8px 12px 50px;
+	user-select: none;
+	cursor: pointer;
+	position: relative;
+}
+
+ul li .datetime-picker{
 	list-style: none;
 	font-size: 20px;
 	margin-top: 40px;
@@ -92,6 +124,10 @@ ul li {
 	position: relative;
 	font-weight: bold;
 }
+
+li.ui-timepicker.pm::before {
+    content: " ";
+} 
 
 ul li::before {
 	content: "";
@@ -130,16 +166,17 @@ ul li span {
 	border-radius: 50%;
 }
 
+
+
 ul li span:hover {
 	background: #edeef0;
 }
 
 input:focus{
-	/* outline-color: red; */
 	border-color: red;
 }
 
-/* Modal */
+/*! ----------MODAL---------- */
 
 .modal {
 	display: none; 
@@ -165,6 +202,9 @@ input:focus{
 	position: relative;
 	text-align: center;
 	font-size: 1.3em;
+	font-family: "Space Mono", monospace ;
+	/* font-weight: 400; */
+	font-style: normal;
 
 }
 
@@ -186,7 +226,8 @@ input:focus{
 	cursor: pointer;
 }
 
-/* .required-field::after {
-    content: "*";
-    color: red;
+/* ! ----------MEDIA QUERIES---------- */
+/* .ui-timepicker-wrapper .ui-menu-item {
+    background-image: none;
+    list-style-type: none;
 } */

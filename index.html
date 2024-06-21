@@ -9,15 +9,24 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 	
 	
 	<link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.13.18/jquery.timepicker.min.css">
+
 	<!-- SCRIPTS -->
 	<script src="script.js" defer></script>
-	<!-- <script src="keys.js" ></script> -->
 	<!-- <script src="keys.mjs" ></script> -->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.13.18/jquery.timepicker.min.js"></script>
+
 	<!-- !HTML -->
 	<!-- TODO: Clean up / Re-write / Modify if need -->
 	<!-- TODO: Include dev names inside footer -->
@@ -49,9 +58,12 @@
 			<div class="row">
 				<input type="text" id="input-box" placeholder="Enter a task..." required />
 			</div>
-			<div class="row">
-				<input type="date" id="inputDate" min 0001 max="9999" required onkeypress="enterKey(event)" />
+
+			<div class="datetime-picker">
+				<input type="text" id="inputDate" placeholder="Select a date...">
+				<input type="text" id="inputTime" placeholder="Select a time..." >
 			</div>
+
 			<button onclick="addTask()">Add to List</button>
 			<ul id="li-container">
 				<!-- !DO NOT DELETE -->
